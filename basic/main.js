@@ -15,11 +15,14 @@ scene.add( cube );
 
 camera.position.z = 5;
 
-function animate() {
+function animate(time) {
+
+	time *= 0.01
 
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 
 	renderer.render( scene, camera );
-
 }
+
+requestAnimationFrame(animate);
